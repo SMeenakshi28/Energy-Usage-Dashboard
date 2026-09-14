@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Energy Insights Dashboard</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+
+    <header class="dashboard-header">
+        <div class="header-inner">
+            <div class="brand-mark" aria-hidden="true">⚡</div>
+            <div>
+                <p class="eyebrow">HOUSEHOLD ANALYTICS</p>
+                <h1>Energy Insights</h1>
+                <p>Household Energy Consumption Dashboard</p>
+            </div>
+            <span class="live-badge"><span></span> Live overview</span>
+        </div>
+    </header>
+
+
+    <main class="dashboard-container">
+
+        <section class="intro-section">
+
+            <div>
+                <p class="eyebrow">AT A GLANCE</p>
+                <h2>Energy Overview</h2>
+                <p>
+                    Explore household energy consumption patterns,
+                    monthly usage, and estimated electricity costs.
+                </p>
+            </div>
+            <div class="intro-accent" aria-hidden="true">↗</div>
+        </section>
+
+        <section class="summary-section">
+
+            <div class="summary-card summary-card--blue">
+
+                <h3>Total Energy Consumption</h3>
+
+                <div class="metric">
+                    <p id="total-consumption">Loading...</p><span>kWh</span>
+                </div>
+
+                <small>Across all recorded usage</small>
+
+            </div>
+
+
+            <div class="summary-card">
+
+                <h3>Average Energy Consumption</h3>
+
+                <div class="metric">
+                    <p id="average-consumption">Loading...</p><span>kWh</span>
+                </div>
+
+                <small>Average per reading</small>
+
+            </div>
+
+            <div class="summary-card">
+
+                <h3>Estimated Electricity Cost</h3>
+
+                <div class="metric">
+                    <p id="estimated-cost">Loading...</p><span>₹</span>
+                </div>
+
+                <small>Estimated at ₹6.50 per kWh</small>
+
+            </div>
+
+        </section>
+
+        <section class="data-section">
+            <div class="section-heading">
+                <div>
+                    <p class="eyebrow">CONSUMPTION TRENDS</p>
+                    <h2>Monthly Energy Consumption</h2>
+                </div>
+                <span class="section-note">Monthly breakdown</span>
+            </div>
+            <div class="filter-control">
+                <label for="month-filter">Select Month:</label>
+
+                <select id="month-filter">
+                    <option value="">All Months</option>
+                    <option value="1">January</option>
+                    <option value="2">February</option>
+                    <option value="3">March</option>
+                    <option value="4">April</option>
+                    <option value="5">May</option>
+                </select>
+            </div>
+            <div class="chart-container chart-container--large">
+                <canvas id="monthly-chart"></canvas>
+            </div>
+
+            <div class="table-wrap">
+                <table>
+
+                    <thead>
+                        <tr>
+                            <th>Month</th>
+                            <th>Energy Consumption (kWh)</th>
+                        </tr>
+                    </thead>
+
+                    <tbody id="monthly-data">
+                    </tbody>
+
+                </table>
+            </div>
+
+        </section>
+
+        <section class="data-section">
+            <div class="section-heading">
+                <div>
+                    <p class="eyebrow">STATISTICAL SUMMARY</p>
+                    <h2>Energy Consumption Statistics</h2>
+                </div>
+            </div>
+
+            <div class="table-wrap">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Statistic</th>
+                            <th>Value</th>
+                        </tr>
+                    </thead>
+
+                    <tbody id="statistics-data">
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <section class="data-section">
+            <div class="section-heading">
+                <div>
+                    <p class="eyebrow">FEATURE RELATIONSHIPS</p>
+                    <h2>Correlation with Energy Consumption</h2>
+                </div>
+                <span class="section-note">Relationship with appliance usage</span>
+            </div>
+
+            <div class="table-wrap">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Feature</th>
+                            <th>Correlation</th>
+                        </tr>
+                    </thead>
+
+                    <tbody id="correlation-data">
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <section class="data-section">
+            <div class="section-heading">
+                <div>
+                    <p class="eyebrow">DAILY RHYTHM</p>
+                    <h2>Hourly Energy Consumption</h2>
+                </div>
+            </div>
+
+            <div class="chart-container">
+                <canvas id="hourly-chart"></canvas>
+            </div>
+
+        </section>
+
+        <section class="data-section">
+            <div class="section-heading">
+                <div>
+                    <p class="eyebrow">WEEKLY PATTERN</p>
+                    <h2>Weekday Energy Consumption</h2>
+                </div>
+            </div>
+
+            <div class="chart-container">
+                <canvas id="weekday-chart"></canvas>
+            </div>
+
+        </section>
+
+        <section class="data-section">
+            <div class="section-heading">
+                <div>
+                    <p class="eyebrow">ENVIRONMENTAL CONTEXT</p>
+                    <h2>Temperature vs Energy Consumption</h2>
+                </div>
+            </div>
+
+            <div class="chart-container">
+                <canvas id="temperature-chart"></canvas>
+            </div>
+
+        </section>
+
+    </main>
+
+    <footer class="dashboard-footer">
+
+        <p>
+            Energy Insights <span>•</span> Household Energy Consumption Analysis
+        </p>
+
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+
+</body>
+
+</html>
