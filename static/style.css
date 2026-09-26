@@ -296,26 +296,11 @@ tbody tr:hover {
 .dashboard-footer {
     width: 100%;
     margin-top: 60px;
-    padding: 45px 20px 50px;
-
-    color: #8b96a8;
+    padding: 40px 20px 45px;
+    border-top: 1px solid var(--line);
+    color: var(--muted);
     text-align: center;
-
-    background: #0d1117;
-
-    border-top: 1px solid #30363d;
-    border-bottom: 1px solid #30363d;
-}
-
-/* Created using Streamlit + ML */
-.footer-top {
-    margin-bottom: 28px;
-}
-
-.footer-top p {
-    margin: 0;
-    color: #8b96a8;
-    font-size: 16px;
+    background: var(--surface);
 }
 
 /* GitHub + LinkedIn */
@@ -323,18 +308,14 @@ tbody tr:hover {
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-bottom: 28px;
+    gap: 36px;
+    margin-bottom: 24px;
 }
 
-/* Force proper spacing between the two links */
 .footer-links a {
-    color: #00bfff;
+    color: var(--blue);
     font-size: 16px;
     text-decoration: none;
-}
-
-.footer-links a:first-child {
-    margin-right: 35px;
 }
 
 .footer-links a:hover {
@@ -343,31 +324,32 @@ tbody tr:hover {
 
 /* Copyright */
 .dashboard-footer .copyright {
-    margin: 0 0 35px;
-    color: #8b96a8;
-    font-size: 15px;
+    margin: 0 0 34px;
+    color: var(--muted);
+    font-size: 14px;
 }
 
-/* Source code section */
+/* Source code */
 .source-code {
-    padding-top: 30px;
-    border-top: 1px solid #30363d;
+    padding-top: 28px;
+    border-top: 1px solid var(--line);
 }
 
 .source-code p {
     margin: 0;
-    color: #8b96a8;
-    font-size: 15px;
+    color: var(--muted);
+    font-size: 14px;
 }
 
 .source-code a {
-    color: #00bfff;
+    color: var(--blue);
     text-decoration: none;
 }
 
 .source-code a:hover {
     text-decoration: underline;
 }
+
 .filter-control {
     display: flex;
     align-items: center;
