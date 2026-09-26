@@ -294,21 +294,61 @@ tbody tr:hover {
 }
 
 .dashboard-footer {
-    padding: 26px 20px;
-    border-top: 1px solid var(--line);
-    color: var(--muted);
+    width: 100%;
+    max-width: 880px;
+    margin: 60px auto 0;
+    padding: 35px 20px;
+    color: #8b96a8;
     text-align: center;
-    background: var(--surface);
+    background: #0d1117;
+    border-top: 1px solid #30363d;
+    border-bottom: 1px solid #30363d;
 }
 
 .dashboard-footer p {
     margin: 0;
-    font-size: 12px;
+    font-size: 15px;
 }
 
-.dashboard-footer span {
-    margin: 0 5px;
-    color: var(--blue);
+.footer-top p {
+    margin-bottom: 25px;
+    color: #8b96a8;
+    font-size: 16px;
+}
+
+.footer-links {
+    display: flex;
+    justify-content: center;
+    gap: 35px;
+    margin-bottom: 25px;
+}
+
+.footer-links a,
+.source-code a {
+    color: #00bfff;
+    text-decoration: none;
+}
+
+.footer-links a:hover,
+.source-code a:hover {
+    text-decoration: underline;
+}
+
+.copyright {
+    margin-bottom: 35px !important;
+    color: #8b96a8;
+    font-size: 15px !important;
+}
+
+.source-code {
+    padding-top: 30px;
+    border-top: 1px solid #30363d;
+}
+
+.source-code p {
+    margin: 0;
+    color: #8b96a8;
+    font-size: 15px;
 }
 
 .filter-control {
