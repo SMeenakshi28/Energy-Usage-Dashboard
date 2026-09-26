@@ -295,51 +295,60 @@ tbody tr:hover {
 
 .dashboard-footer {
     width: 100%;
-    max-width: 880px;
-    margin: 60px auto 0;
-    padding: 35px 20px;
+    margin-top: 60px;
+    padding: 45px 20px 50px;
+
     color: #8b96a8;
     text-align: center;
+
     background: #0d1117;
+
     border-top: 1px solid #30363d;
     border-bottom: 1px solid #30363d;
 }
 
-.dashboard-footer p {
-    margin: 0;
-    font-size: 15px;
+/* Created using Streamlit + ML */
+.footer-top {
+    margin-bottom: 28px;
 }
 
 .footer-top p {
-    margin-bottom: 25px;
+    margin: 0;
     color: #8b96a8;
     font-size: 16px;
 }
 
+/* GitHub + LinkedIn */
 .footer-links {
     display: flex;
+    align-items: center;
     justify-content: center;
-    gap: 35px;
-    margin-bottom: 25px;
+    margin-bottom: 28px;
 }
 
-.footer-links a,
-.source-code a {
+/* Force proper spacing between the two links */
+.footer-links a {
     color: #00bfff;
+    font-size: 16px;
     text-decoration: none;
 }
 
-.footer-links a:hover,
-.source-code a:hover {
+.footer-links a:first-child {
+    margin-right: 35px;
+}
+
+.footer-links a:hover {
     text-decoration: underline;
 }
 
-.copyright {
-    margin-bottom: 35px !important;
+/* Copyright */
+.dashboard-footer .copyright {
+    margin: 0 0 35px;
     color: #8b96a8;
-    font-size: 15px !important;
+    font-size: 15px;
 }
 
+/* Source code section */
 .source-code {
     padding-top: 30px;
     border-top: 1px solid #30363d;
@@ -351,6 +360,14 @@ tbody tr:hover {
     font-size: 15px;
 }
 
+.source-code a {
+    color: #00bfff;
+    text-decoration: none;
+}
+
+.source-code a:hover {
+    text-decoration: underline;
+}
 .filter-control {
     display: flex;
     align-items: center;
