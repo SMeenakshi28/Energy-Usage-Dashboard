@@ -296,53 +296,64 @@ tbody tr:hover {
 .dashboard-footer {
     width: 100%;
     margin-top: 60px;
-    padding: 40px 20px 45px;
+    padding: 48px 24px;
     border-top: 1px solid var(--line);
+    background: var(--surface);
     color: var(--muted);
     text-align: center;
-    background: var(--surface);
 }
 
-/* GitHub + LinkedIn */
 .footer-links {
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 36px;
+    gap: 24px;
     margin-bottom: 24px;
 }
 
 .footer-links a {
-    color: var(--blue);
-    font-size: 16px;
+    display: inline-flex;
+    align-items: center;
+    padding: 8px 18px;
+    border: 1px solid var(--line);
+    border-radius: 99px;
+    color: var(--navy);
+    font-size: 14px;
+    font-weight: 600;
     text-decoration: none;
+    transition: all 0.2s ease;
 }
 
 .footer-links a:hover {
-    text-decoration: underline;
+    border-color: var(--blue);
+    background: var(--canvas);
+    color: var(--blue);
+    transform: translateY(-2px);
 }
 
-/* Copyright */
 .dashboard-footer .copyright {
-    margin: 0 0 34px;
+    margin: 0 0 24px;
     color: var(--muted);
-    font-size: 14px;
+    font-size: 13px;
+    letter-spacing: 0.01em;
 }
 
-/* Source code */
 .source-code {
-    padding-top: 28px;
-    border-top: 1px solid var(--line);
+    max-width: 480px;
+    margin: 0 auto;
+    padding-top: 24px;
+    border-top: 1px dashed var(--line);
 }
 
 .source-code p {
     margin: 0;
     color: var(--muted);
-    font-size: 14px;
+    font-size: 13px;
 }
 
 .source-code a {
     color: var(--blue);
+    font-weight: 600;
     text-decoration: none;
 }
 
